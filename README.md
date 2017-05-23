@@ -23,6 +23,8 @@ Listeners get notiﬁed about changes to this property.
 
 Delegates.observable() takes two arguments: the initial value and a handler for modiﬁcations. The handler gets called every time we assign to the property (after the assignment has been performed). It has three parameters: a property being assigned to, the old value and the new one:
 
+```kotlin
+
     import kotlin.properties.Delegates
 
     class User {    
@@ -37,9 +39,10 @@ Delegates.observable() takes two arguments: the initial value and a handler for 
       user.initialValue = "first"    
       user.initialValue = "second" 
     }
-    
+```
+
  This example prints 
- <handler for modiﬁcations> -> first first -> second
+ `<handler for modiﬁcations> -> first first -> second`
 
 
 ## Storing the values of a properties in a Map
